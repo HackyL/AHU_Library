@@ -1,0 +1,27 @@
+.container {
+  padding-left: 36rpx;
+  padding-right: 36rpx;
+}
+
+.DetailTitle {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60rpx;
+}
+
+.BookDetail {
+  margin: 15rpx auto auto 10rpx;
+  color: black;
+}
+
+.DetailContent {
+  display: flex;
+  flex-direction: column;
+  margin: 15rpx auto 15rpx 10rpx;
+}
+
+.collect {
+  float: right;
+  width: 60rpx;
+  height: 50rpx;
+}

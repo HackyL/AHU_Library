@@ -1,0 +1,25 @@
+<template name="result">
+  <view class="result-num">搜索结果{{bookList.length}}条</view>
+  <block wx:for="{{bookList}}" wx:for-item="book" wx:for-index="idx">
+    <view class="result" data-id="{{book.id-1}}" bindtap="toDetail">
+      <text class='book-name' style='background-color:{{BGColor[randColor[idx]]}};'>{{book.name}}</text>
+      <view class='result-content'>
+        <view>
+          <text>作者：</text>
+          <text>{{book.author}}</text>
+        </view>
+        <view>
+          <text>出版社：</text>
+          <text>{{book.publisher}}</text>
+        </view>
+        <view>
+          <text>出版日期：</text>
+          <text>{{book.publishdate}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='tobottom' wx:if="{{nomore}}">
+    <text class='no'>没有更多了</text>
+  </view>
+</template>

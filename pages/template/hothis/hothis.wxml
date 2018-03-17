@@ -1,0 +1,25 @@
+<template name="hothis">
+  <text class="title">热门搜索</text>
+  <view class="hotKeysList">
+    <block wx:for="{{hotKeys}}">
+      <view class="hotKeysItem" bindtap="onKeyTap" data-key="{{item}}">{{item}}</view>
+    </block>
+  </view>
+
+  <view class='hisbar'>
+    <text class="title">搜索历史</text>
+    <text class='clearAll' bindtap='clearAll' wx:if="{{hisKeys[0]}}">清空</text>
+  </view>
+  <view wx:if="{{hisKeys[0]}}">
+    <block wx:for="{{hisKeys}}">
+      <view class="hisKeysItem">
+        <image src='/img/icon/history.png' class='icon'></image>
+        <text class="hisKeysItemText" bindtap="onKeyTap" data-key="{{item}}">{{item}}</text>
+        <image src='/img/icon/delete.png' class='icon' data-key='{{item}}' bindtap='deleteKey'></image>
+      </view>
+    </block>
+  </view>
+  <view wx:else>
+    <view class="emptyHistory">搜索历史为空</view>
+  </view>
+</template>

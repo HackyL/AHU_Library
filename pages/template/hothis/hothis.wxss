@@ -1,0 +1,65 @@
+.title {
+  display: block;
+  margin-left: 10px;
+  padding: 10px 5px 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hotKeysList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hotKeysItem {
+  background-color: #99a8bf;
+  color: white;
+  flex: 1 0 20%;
+  font-size: 14px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 50px;
+  padding: 8rpx 0 8rpx 0;
+}
+
+.hisbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.clearAll {
+  color: red;
+  padding: 10px 5px 5px 10px;
+  margin-left: 500rpx;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hisKeysItem {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin: auto 0 auto 10rpx;
+}
+
+.hisKeysItemText {
+  flex: 8;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.emptyHistory {
+  color: #7b7b7b;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}

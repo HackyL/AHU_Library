@@ -1,0 +1,21 @@
+<view class="topline"></view>
+
+<view> 
+  <view wx:if="{{ flag==1 }}">
+    <image class="yes" src="/img/icon/success.jpg"></image>
+  </view>
+
+  <view wx:if="{{ flag==2 }}">
+    <view class="rentinfo">身份认证</view>
+    <form bindsubmit='searchBox'>
+      <input name="user" class="loginfo" placeholder="读者证号"></input>
+      <input name="pw" class="loginfo" placeholder="读者密码" password="true"></input>
+      <button class="login" hover-class="login0" form-type="submit" bindtap="login">绑定</button>
+    </form>
+  </view>
+
+  <view class='error' wx:if="{{isErr}}">
+    <image class='errorimg' src='/img/icon/error.jpg' ></image>
+    <text class='errortext'>请检查网络原因后重试</text>
+  </view>
+</view>

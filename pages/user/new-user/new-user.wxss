@@ -1,0 +1,69 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+}
+.line {
+  height: 2rpx;
+  width: 100%;
+  background: lightgray;
+}
+.lightline {
+  height: 2rpx;
+  width: 100%;
+  background: #F4F4F4;
+}
+.first {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  box-shadow: 0rpx 0rpx 16rpx #E7E7E7;
+}
+.second {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin-top: 30rpx;
+  box-shadow: 0rpx 0rpx 16rpx #E7E7E7;
+}
+.third {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin-top: 30rpx;
+  box-shadow: 0rpx 0rpx 16rpx #E7E7E7;
+}
+.item {
+  padding: 24rpx 40rpx 24rpx 30rpx;
+  font-size: 32rpx;
+  color: grey;
+}
+.user-section {
+  margin: 45rpx auto 20rpx 120rpx;
+}
+.user-name {
+  font-size: 50rpx;
+  font-weight: 600;
+  color: black;
+  width: 260rpx;
+
+}
+.user-major {
+  font-size: 30rpx;
+  float: right;
+}
+.user-avatar {
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  margin: 20rpx 120rpx 20rpx auto;
+}
+.user-button {
+  background: white;
+}
+.icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 28rpx;
+  margin-left: 50rpx;
+}

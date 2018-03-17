@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view style='background:white;'>
+  <view class="search-pancel" bindtap='toSearch'>
+    <input disabled='{{true}}' placeholder="馆藏检索" class="search-input" />
+    <text class='search-button'>搜索</text>
+  </view>
+  <swiper class='slide' autoplay="{{true}}" interval="3000">
+    <block wx:for="{{newsImg}}">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" data-id='{{item.id}}' bindtap='toNews' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='news-list'>
+  <block wx:for="{{newsAtl}}">
+    <view class='title-data' data-id='{{item.id}}' bindtap='toNews'>
+      <text class='news-title'># {{item.title}}</text>
+      <text class='news-data'>{{item.date}}</text>
+    </view>
+  </block>
+</view>

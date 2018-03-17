@@ -1,0 +1,30 @@
+<view class='container' wx:if="{{ flag0 }}">
+  <view class='DetailTitle'>
+    <view class='title'>
+      <view bindtap='changeCollect'>
+        <text style='background-color:{{BGColor[idx]}};color: white;font-size: 32rpx;'>索取号：{{resultData.claim}}</text>
+        <image src='/img/icon/collect_on.png' class='collect' wx:if="{{resultData.collected}}"></image>
+        <image src='/img/icon/collect_off.png' class='collect' wx:else></image>
+      </view>
+    </view>
+    <view style='margin-top:20rpx'>
+      <text style='background-color:{{BGColor[idx]}};color: white;font-size: 32rpx; '>{{resultData.name}}</text>
+    </view>
+    <text class='BookDetail'>作者：{{resultData.author}}</text>
+    <text class='BookDetail'>出版社：{{resultData.publisher}}</text>
+    <text class='BookDetail'>出版日期：{{resultData.publishdate}}</text>
+    <text style='margin-top:50rpx;font-size:32rpx;color: black;'>馆藏复本：{{resultData.detailNum}}</text>
+  </view>
+  <view wx:for="{{resultData.detailData}}" wx:for-item="detail">
+    <view>
+      <view style='margin-top:30rpx'>
+        <text style='background-color:{{BGColor[idx]}};color: white;font-size: 32rpx;'>{{detail.title}}</text>
+      </view>
+      <block wx:for="{{detail.sur_name}}" wx:for-item="book">
+        <view class='DetailContent'>
+          <text style="color: black">{{book.status}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

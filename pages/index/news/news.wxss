@@ -1,0 +1,33 @@
+/* pages/news/news.wxss */
+
+.title-data {
+  margin: 30px 40px 0 60rpx;
+}
+
+.title {
+  font-family: '华文细黑';
+  font-weight: bold;
+  font-size: 36rpx;
+  line-height: 30px;
+}
+
+.date {
+  margin-top: 18rpx;
+  float: right;
+  width: 100rpx;
+  font-style: italic;
+  font-size: 18rpx;
+}
+
+.content {
+  font-family:'KaiTi';
+  margin: 0 30px;
+  line-height: 30px;
+  text-indent: 70rpx;
+  text-align: left;
+  margin-top: 30rpx;
+}
+
+text {
+  color: black;
+}

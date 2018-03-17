@@ -1,0 +1,8 @@
+<!--pages/news/news.wxml-->
+<view class='title-data'>
+  <text class='title'>{{news.title}}</text>
+  <text class='date'>{{news.date}}</text>
+</view>
+<view class='content'>
+  <text>{{news.text}}</text>
+</view>

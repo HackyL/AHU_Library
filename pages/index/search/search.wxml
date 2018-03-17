@@ -1,0 +1,29 @@
+<!--search.wxml-->
+<import src="/pages/template/result/result.wxml" />
+<import src="/pages/template/hothis/hothis.wxml" />
+
+<view class="search-pancel">
+  <input type="text" focus='{{focused}}' placeholder="请输入所搜书名" confirm-type="search" value="{{searchValue}}" class="search-input" bindinput="onInput" bindconfirm='toResult' />
+  <text class='search-button' bindtap="toResult">搜索</text>
+  <view wx:if="{{searchValue.length>0}}" class="icon-clear" bindtap="onCancel">
+    <icon type="clear" size="18"></icon>
+  </view>
+</view>
+
+<view wx:if="{{hothisShow}}">
+  <template is='hothis' data='{{...hothisData}}' />
+</view>
+
+<view wx:if="{{resultShow}}">
+  <template is="result" data="{{...resultData}}" />
+</view>
+
+<view class='error' wx:if="{{isErr}}">
+  <image class='errorimg' src='/img/icon/wrong.jpg' ></image>
+  <text class='errortext'>请检查网络原因后重试</text>
+</view>
+
+<view class='error' wx:if="{{isNull}}">
+  <image class='errorimg' src='/img/icon/bookless.jpg' ></image>
+  <text class='errortext'>请输入其他关键字查询</text>
+</view>

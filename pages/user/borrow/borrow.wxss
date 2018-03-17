@@ -1,0 +1,45 @@
+page {
+  background-color: #F4F4F4;
+}
+.topline {
+  height: 2rpx;
+  width: 100%;
+  background: lightgray;
+}
+.first {
+  padding-left: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: white;
+  font-size: 32rpx;
+  box-shadow: 0rpx 0rpx 16rpx #E7E7E7;
+}
+.text {
+  margin: 20rpx;
+}
+.sc {
+  margin-top: 30rpx;
+  float: right;
+  height: 50rpx;
+  width: 60rpx;
+}
+.img {
+  width: 394rpx;
+  height: 490rpx;
+  margin: 150rpx auto 20rpx 178rpx;
+}
+.error{
+  display: flex;
+  flex-direction: column;
+  margin: 150rpx auto 20rpx 178rpx;
+}
+
+.errorimg{
+  width: 394rpx;
+  height: 490rpx;
+  background: lightgrew;
+}
+
+.errortext{
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+}

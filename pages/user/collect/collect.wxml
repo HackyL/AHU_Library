@@ -1,0 +1,19 @@
+<view class="topline"></view>
+<block  wx:if="{{ flag2==1 }}">
+  <image class="img" src="/img/icon/nothing.jpg"></image>
+</block>
+
+<block wx:if="{{ flag2==2 }}">
+  <view wx:for="{{array}}" wx:for-item="abc" wx:for-index="idx" bindtap="toDetail" data-id="{{ idx }}" class="first">
+    <view class="text" style="padding-top: 30rpx;"><text style="background-color:{{BGColor[idx%6]}};color: white;">索引号：{{abc.claim}}</text><image class="sc" data-id="{{ idx }}" data-nurl="{{abc.nurl}}" src="/img/icon/{{abc.flag}}.png" catchtap="change"></image></view>
+    <view class="text"><text style="background-color:{{BGColor[idx%6]}};color: white;">{{abc.name}}</text></view>
+    <view class="text">作者：{{abc.author}}</view>
+    <view class="text">出版社：{{abc.publisher}}</view>
+    <view class="text" style="padding-bottom: 30rpx;">出版日期：{{abc.publishdate}}</view>
+  </view>
+</block>
+
+<view class='error' wx:if="{{isErr}}">
+  <image class='errorimg' src='/img/icon/error.jpg' ></image>
+  <text class='errortext'>请检查网络原因后重试</text>
+</view>

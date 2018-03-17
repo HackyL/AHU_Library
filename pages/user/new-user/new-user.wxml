@@ -1,0 +1,45 @@
+<view>
+  <view wx:if="{{!hasUserInfo && canIUse}}" class="first">
+    <view class="user-section">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="user-button">点击登录</button>
+    </view>
+    <image class="user-avatar" src="/img/icon/avatar.png"></image>
+  </view>
+
+  <view wx:else class="first">
+    <view class="user-section">
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+    <image class="user-avatar" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+
+  <view class="second">
+    <navigator style="display:flex" url="/pages/user/binding/binding">
+      <image class="icon" src="/img/icon/1.png"></image>
+      <view class="item">身份认证</view>
+    </navigator>
+    <view class="lightline"></view>
+    <navigator style="display:flex" url="/pages/user/borrow/borrow">
+      <image class="icon" src="/img/icon/2.png"></image>
+      <view class="item">我的借阅</view>
+    </navigator>
+    <view class="lightline"></view>
+    <navigator style="display:flex" url="/pages/user/collect/collect">
+      <image class="icon" src="/img/icon/3.png"></image>
+      <view class="item">我的收藏</view>
+    </navigator>
+  </view>
+  <view class="third">
+    <navigator style="display:flex" bindtap="aboutus">
+      <image class="icon" src="/img/icon/4.png"></image>
+      <view class="item">关于我们</view>
+    </navigator>
+    <view class="lightline"></view>
+    <navigator style="display:flex" bindtap="joinus">
+      <image class="icon" src="/img/icon/5.png"></image>
+      <view class="item">加入我们</view>
+    </navigator>
+    
+  </view>
+  
+</view>

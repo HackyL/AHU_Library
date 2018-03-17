@@ -1,0 +1,67 @@
+page {
+  background-color: #F4F4F4;
+}
+.topline {
+  height: 2rpx;
+  width: 100%;
+  background: lightgray;
+}
+.rentinfo {
+  margin: 40rpx;
+  margin-top: 120rpx;
+  margin-bottom: 60rpx;
+  font-size: 45rpx;
+  text-align: center;
+}
+.login {
+  width: 450rpx;
+  height: 84rpx;
+  background-color: black;
+  color: white;
+  font-size: 36rpx;
+  border-radius: 1%;
+  position: relative;
+}
+.login0 {
+  width: 450rpx;
+  height: 80rpx;
+  background-color: gray;
+  color: white;
+  font-size: 36rpx;
+  border-radius: 1%;
+  top: 1rpx;
+}
+.loginfo {
+  margin: 60rpx 150rpx;
+  width: 450rpx;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1rpx;
+}
+.rentinfo1 {
+  margin: 20rpx;
+  font-size: 22px;
+  text-align: center;
+}
+.yes {
+  width: 394rpx;
+  height: 490rpx;
+  margin: 150rpx auto 20rpx 178rpx;
+}
+
+.error{
+  display: flex;
+  flex-direction: column;
+  margin: 150rpx auto 20rpx 178rpx;
+}
+
+.errorimg{
+  width: 394rpx;
+  height: 490rpx;
+  background: lightgrew;
+}
+
+.errortext{
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+}

@@ -1,0 +1,36 @@
+/* pages/result/result.wxss */
+
+.result {
+  padding: 30rpx 65rpx;
+}
+
+.result-content {
+  margin-top: 10rpx;
+  margin-left: 5rpx;
+}
+
+.result-num {
+  color: #7b7b7b;
+  font-style: italic;
+  text-align: center;
+  padding: 10rpx;
+}
+
+.book-name {
+  color: white;
+  font-size: 38rpx;
+  border-radius: 2px;
+  padding: 2px 1px 2px 1px;
+}
+
+.no {
+  color: #999;
+  line-height: 50px;
+}
+
+.tobottom {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #ebebeb;
+}
