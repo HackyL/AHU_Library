@@ -1,0 +1,56 @@
+.wholeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.todayPart{
+    display: flex;
+    flex-direction: column;
+    height: 526rpx;
+    width: 653rpx;
+    background-color: #8fbab3;
+    margin-top: 63rpx;
+    margin-left: 46rpx;
+    border-radius: 15rpx;
+}
+
+.todayInfo{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 40rpx;
+    margin-top: 37rpx;
+}
+
+.todayBath{
+    display: flex;
+    flex-direction: row;
+    margin-top: 86rpx;
+    margin-left: 63.5rpx;
+}
+
+.tomorrowPart{
+    display: flex;
+    flex-direction: column;
+    height: 401rpx;
+    width: 653rpx;
+    background-color: #babcbb;
+    margin-top: 61rpx;
+    margin-left: 46rpx;
+    border-radius: 15rpx;
+}
+
+.tomorrowInfo{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 40rpx;
+    margin-top: 37rpx;
+}
+
+.tomorrowBath{
+    display: flex;
+    flex-direction: row;
+    margin-top: 59rpx;
+    margin-left: 83rpx;
+}

@@ -1,0 +1,37 @@
+<view class="wholeContainer">
+    <view class="todayPart">
+        <view class="todayInfo">
+            <text style="font-size: 37.33rpx;color: white">今日 - 周{{todayDay}}</text>
+            <text style="font-size: 28rpx;color:white">{{todayDate}}</text>
+            <text style="font-size: 23.33rpx;color:white">10:30-21:00</text>
+        </view>
+        <view class="todayBath">
+            <view style="display: flex;flex-direction: column;text-align: center">
+                <text style="font-size: 70rpx;color: white">北区</text>
+                <text style="font-size: 46.67rpx;color: white;margin-top: 37rpx">{{front}}</text>
+            </view>
+            <view style="display: flex;flex-direction: column;text-align: center;margin-left: 82rpx">
+                <text style="font-size: 70rpx;color: white">南区/蕙园</text>
+                <text style="font-size: 46.67rpx;color: white;margin-top: 37rpx">{{rear}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="tomorrowPart">
+        <view class="tomorrowInfo">
+            <text style="font-size: 32.67rpx;color: #8f8f8f">明日 - 周{{tomorrowDay}}</text>
+            <text style="font-size: 23.33rpx;color:#8f8f8f">{{tomorrowDate}}</text>
+            <text style="font-size: 18.67rpx;color:#8f8f8f">10:30-21:00</text>
+        </view>
+        <view class="tomorrowBath">
+            <view style="display: flex;flex-direction: column;text-align: center">
+                <text style="font-size: 56rpx;color: #8f8f8f">北区</text>
+                <text style="font-size: 42rpx;color: #8f8f8f;margin-top: 25.5rpx">{{rear}}</text>
+            </view>
+            <view style="display: flex;flex-direction: column;text-align: center;margin-left: 124rpx">
+                <text style="font-size: 56rpx;color: #8f8f8f">南区/蕙园</text>
+                <text style="font-size: 42rpx;color: #8f8f8f;margin-top: 25.5rpx">{{front}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<image scr="http://xk1.ahu.cn/checkcode.aspx"></image>
