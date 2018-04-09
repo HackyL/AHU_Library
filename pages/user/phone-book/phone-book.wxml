@@ -1,0 +1,20 @@
+<view style="display: flex;margin-top: 25rpx">
+    <view style="display: flex;flex-direction: column;margin-left: 54rpx">
+        <view class="content" bindtap="showDetail" id="c0" style="background-color: {{contentColor[0]}}; color:{{setWhite[0]}}">常用</view>
+        <view class="content" bindtap="showDetail" id="c1" style="background-color: {{contentColor[1]}}; color:{{setWhite[1]}}">教务处</view>
+        <view class="content" bindtap="showDetail" id="c2" style="background-color: {{contentColor[2]}}; color:{{setWhite[2]}}">团委</view>
+        <view class="content" bindtap="showDetail" id="c3" style="background-color: {{contentColor[3]}}; color:{{setWhite[3]}}">学生处</view>
+        <view class="content" bindtap="showDetail" id="c4" style="background-color: {{contentColor[4]}}; color:{{setWhite[4]}}">财务处</view>
+        <view class="content" bindtap="showDetail" id="c5" style="background-color: {{contentColor[5]}}; color:{{setWhite[5]}}">保卫处</view>
+        <view class="content" bindtap="showDetail" id="c6" style="background-color: {{contentColor[6]}}; color:{{setWhite[6]}}">宿舍</view>
+        <view class="content" bindtap="showDetail" id="c7" style="background-color: {{contentColor[7]}}; color:{{setWhite[7]}}">物业</view>
+        <view class="content" bindtap="showDetail" id="c8" style="background-color: {{contentColor[8]}}; color:{{setWhite[8]}}">校医院</view>
+    </view>
+    <view class="lightline"></view>
+    <view style="margin-left: 54rpx">
+        <view wx:for="{{showNum}}">
+            <text style="margin-top: 25rpx; background-color: {{detailColor}}; color:white">{{item.name}}</text>
+            <view bindtap="makePhoneCall" id="{{index}}">{{item.phone}}</view>
+        </view>
+    </view>
+</view>

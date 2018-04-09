@@ -2,41 +2,10 @@
 App({
   onLaunch: function () {  //x
     // 展示本地存储能力
-    var that = this
+    var that = this;
     var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-    wx.login({  //登录
-      success: function (res) {
-        wx.request({
-          url: 'https://windytrees.cn/getOpenid.php?code=' + res.code,
-          data: {
-          },
-          header: {
-            'content-type': 'application/json'
-          },
-          success: function (res1) {
-            var openid = res1.data;
-            wx.setStorageSync('openid', openid);
-            wx.request({     //检测是否绑定
-              url: 'https://windytrees.cn/tied.php?uid=' + openid,
-              data: {
-              },
-              header: {
-                'content-type': 'application/json'
-              },
-              success: function (res2) {
-                if (res2.data.code == 1) {  //已绑定
-                  var username = res2.data.username;
-                  wx.setStorageSync('username', username);
-                }
-              }
-            });
-          }
-        })
-      }
-    })
-
+    logs.unshift(Date.now());
+    wx.setStorageSync('logs', logs);
     wx.getNetworkType({
       success: function (res) {
         // 返回网络类型, 有效值：
@@ -73,17 +42,51 @@ App({
           })
         }
         else {
+          wx.removeStorageSync('openid');
+          wx.removeStorageSync('username');
           wx.authorize({    //授权
             scope: 'scope.userInfo',
             success() {
               wx.getUserInfo({
                 success: function (res) {
+                  wx.login({  //登录
+                    success: function (res) {
+                      console.log(res.errMsg);
+                      wx.request({
+                        url: 'https://windytrees.cn/getOpenid.php?code=' + res.code,
+                        data: {
+                        },
+                        header: {
+                          'content-type': 'application/json'
+                        },
+                        success: function (res1) {
+                          var openid = res1.data;
+                          wx.setStorageSync('openid', openid);
+                          wx.request({     //检测是否绑定
+                            url: 'https://windytrees.cn/tied.php?uid=' + openid,
+                            data: {
+                            },
+                            header: {
+                              'content-type': 'application/json'
+                            },
+                            success: function (res2) {
+                              if (res2.data.code == 1) {  //已绑定
+                                var username = res2.data.username;
+                                wx.setStorageSync('username', username);
+                              }
+                            }
+                          });
+                        },
+
+                      })
+                    }
+                  })
                   // 可以将 res 发送给后台解码出 unionId
-                  this.globalData.userInfo = res.userInfo
+                  that.globalData.userInfo = res.userInfo
                   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
                   // 所以此处加入 callback 以防止这种情况
-                  if (this.userInfoReadyCallback) {
-                    this.userInfoReadyCallback(res)
+                  if (that.userInfoReadyCallback) {
+                    that.userInfoReadyCallback(res)
                   }
                 }
               })

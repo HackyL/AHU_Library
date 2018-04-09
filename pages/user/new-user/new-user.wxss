@@ -23,7 +23,7 @@ page {
   background-color: white;
   height: 100%;
   width: 100%;
-  margin-top: 30rpx;
+  margin-top: 41rpx;
   box-shadow: 0rpx 0rpx 16rpx #E7E7E7;
 }
 .third {
@@ -60,10 +60,30 @@ page {
 }
 .user-button {
   background: white;
+  border: 1rpx solid #C0C0C0;
 }
 .icon {
   width: 36rpx;
   height: 36rpx;
   margin-top: 28rpx;
   margin-left: 50rpx;
+}
+
+.extend{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin-top: 41rpx;
+  box-shadow: 0rpx 0rpx 16rpx #E7E7E7;
+}
+
+.buttonContainer{
+  display: flex;
+  height:90rpx;
+  width: 750rpx;
+  background-color: transparent;
+}
+
+button::after{
+  border: none;
 }

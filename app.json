@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/user/bath/bath",
     "pages/index/index",
     "pages/user/new-user/new-user",
     "pages/user/binding/binding",
@@ -8,7 +7,10 @@
     "pages/index/detail/detail",
     "pages/user/collect/collect",
     "pages/index/news/news",
-    "pages/user/borrow/borrow"
+    "pages/user/borrow/borrow",
+    "pages/user/bath/bath",
+    "pages/user/lib/lib",
+    "pages/user/phone-book/phone-book"
   ],
   "window": {
     "backgroundTextStyle": "light",

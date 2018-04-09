@@ -7,7 +7,7 @@ Page({
     hasUserInfo: false,   //微信登录开关
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
-  onLoad: function () {   //初始加载
+  onShow: function () {   //初始加载
     var that = this;
     if (app.globalData.userInfo) {
       this.setData({
@@ -43,6 +43,39 @@ Page({
       this.setData({
         userInfo: e.detail.userInfo,
         hasUserInfo: true,
+      });
+      wx.login({  //登录
+        success: function (res) {
+          console.log(res.errMsg);
+          wx.request({
+            url: 'https://windytrees.cn/getOpenid.php?code=' + res.code,
+            data: {
+            },
+            header: {
+              'content-type': 'application/json'
+            },
+            success: function (res1) {
+              var openid = res1.data;
+              wx.setStorageSync('openid', openid);
+              wx.request({     //检测是否绑定
+                url: 'https://windytrees.cn/tied.php?uid=' + openid,
+                data: {
+                },
+                header: {
+                  'content-type': 'application/json'
+                },
+                success: function (res2) {
+                  if (res2.data.code == 1) {  //已绑定
+                    var username = res2.data.username;
+                    wx.setStorageSync('openid', openid);
+                    wx.setStorageSync('username', username);
+                  }
+                }
+              });
+            },
+
+          })
+        }
       })
     }
   },
@@ -68,4 +101,22 @@ Page({
       }
     })
   },
+    onLib:function(){
+        if (!wx.getStorageSync('openid')) {
+            wx.showModal({
+                title: '提示',
+                showCancel: false,
+                content: '您尚未登录！',
+                success: function (res) {
+                    if (res.confirm)
+                        console.log('用户点击确定')
+                }
+            });
+        }
+        else{
+          wx.navigateTo({
+            url: '/pages/user/binding/binding'
+          })
+        }
+    }
 })

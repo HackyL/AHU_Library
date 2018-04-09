@@ -1,6 +1,6 @@
 Page({
     data:{
-
+      imageUrl:"http://jw3.ahu.cn/checkcode.aspx"
     },
     onShow:function () {
         var that = this;

@@ -11,10 +11,6 @@ Page({
     var that = this;
     var tied = wx.getStorageSync('tied');
     var openid = wx.getStorageSync('openid');
-    wx.showLoading({
-      title: '正在为您检测认证信息',
-      mask: true,
-    })
     wx.getNetworkType({
       success: function (res) {
         // 返回网络类型, 有效值：
@@ -26,7 +22,11 @@ Page({
             isErr: true
           })
         }
-        else {
+        else{
+          wx.showLoading({
+              title: '正在为您检测认证信息',
+              mask: true,
+          });
           wx.request({     //检测是否绑定
             url: 'https://windytrees.cn/tied.php?uid=' + openid,
             data: {
@@ -40,7 +40,9 @@ Page({
                 that.setData({
                   flag: 1
                 });
-
+                wx.redirectTo({
+                  url: '../lib/lib',
+                })
               }
               else {  //未绑定
                 that.setData({
@@ -58,7 +60,8 @@ Page({
               }
             }
           });
-        }
+          }
+        
       },
       fail: function (err) {
 
@@ -66,8 +69,29 @@ Page({
       complete: function () {
 
       }//请求完成后执行的函数
-    })
+    });
+      wx.getSetting({  //获取用户信息
+          success: function (res) {
+              if (!res.authSetting['scope.userInfo']) {
+                  wx.showModal({
+                      title: '提示',
+                      showCancel: false,
+                      content: '您尚未登录',
+                      success: function (res) {
+                          if (res.confirm) {
+                              wx.redirectTo({
+                                  url: "../new-user/new-user"
+                              })
+                          }
+                      }
+                  })
+              }
+          }
+      })
   },
+  onReady:function(){
+
+    },
   searchBox: function (e) {  //获取输入框中的用户名和密码
     var that = this;
     that.setData({

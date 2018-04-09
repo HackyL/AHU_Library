@@ -1,0 +1,12 @@
+.content{
+    font-size: 42rpx;
+    margin-top: 25rpx;
+}
+
+.lightline {
+    width: 2rpx;
+    height: 700rpx;
+    background: #b76d7a;
+    margin-top: 25rpx;
+    margin-left: 25rpx;
+}

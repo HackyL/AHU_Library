@@ -13,31 +13,42 @@
     <image class="user-avatar" src="{{userInfo.avatarUrl}}"></image>
   </view>
 
+  <view class="extend">
+    <navigator style="display:flex" url="">
+      <image class="icon" style="height: 48rpx;margin-top: 22rpx" src="/img/icon/7.png"></image>
+      <view class="item">发布通知</view>
+    </navigator>
+  </view>
+
   <view class="second">
-    <navigator style="display:flex" url="/pages/user/binding/binding">
-      <image class="icon" src="/img/icon/1.png"></image>
-      <view class="item">身份认证</view>
-    </navigator>
-    <view class="lightline"></view>
-    <navigator style="display:flex" url="/pages/user/borrow/borrow">
+    <navigator style="display:flex" bindtap="onLib">
       <image class="icon" src="/img/icon/2.png"></image>
-      <view class="item">我的借阅</view>
+      <view class="item">图书馆</view>
     </navigator>
     <view class="lightline"></view>
-    <navigator style="display:flex" url="/pages/user/collect/collect">
-      <image class="icon" src="/img/icon/3.png"></image>
-      <view class="item">我的收藏</view>
+    <navigator style="display:flex" url="/pages/user/bath/bath">
+      <image class="icon" src="/img/icon/8.png"></image>
+      <view class="item">浴室开放</view>
+    </navigator>
+    <view class="lightline"></view>
+    <navigator style="display:flex" url="/pages/user/phone-book/phone-book">
+      <image class="icon" src="/img/icon/9.png"></image>
+      <view class="item">校电话簿</view>
     </navigator>
   </view>
   <view class="third">
+    
+  <navigator style="display:flex">
+    <button class="buttonContainer" open-type='contact' session-from='weapp'>
+        <image class="icon" style="margin-left: 23rpx" src="/img/icon/5.png"></image>
+        <text style="font-size: 32rpx; color: grey; margin-top:8rpx;margin-left:30rpx">联系客服</text>
+    </button>
+   </navigator>
+  
+    <view class="lightline"></view>
     <navigator style="display:flex" bindtap="aboutus">
       <image class="icon" src="/img/icon/4.png"></image>
       <view class="item">关于我们</view>
-    </navigator>
-    <view class="lightline"></view>
-    <navigator style="display:flex" bindtap="joinus">
-      <image class="icon" src="/img/icon/5.png"></image>
-      <view class="item">加入我们</view>
     </navigator>
     
   </view>

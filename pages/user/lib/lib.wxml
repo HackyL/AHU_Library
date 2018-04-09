@@ -1,0 +1,15 @@
+<view class="wholeContainer">
+    <view style="display:flex;flex-direction:column;margin-top: 41rpx">
+        <navigator class="item" url="/pages/user/borrow/borrow">
+            <image class="icon" src="/img/icon/6.png"></image>
+            <view class="words">我的借阅</view>
+            <image class="arrow" src="/img/icon/arrow.png"></image>
+        </navigator>
+        <view class="lightline"></view>
+        <navigator class="item" url="/pages/user/collect/collect">
+            <image class="icon" src="/img/icon/3.png"></image>
+            <view class="words">我的收藏</view>
+            <image class="arrow" src="/img/icon/arrow.png"></image>
+        </navigator>
+    </view>
+</view>
