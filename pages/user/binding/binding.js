@@ -11,6 +11,10 @@ Page({
     var that = this;
     var tied = wx.getStorageSync('tied');
     var openid = wx.getStorageSync('openid');
+    wx.showLoading({
+      title: '正在为您检测认证信息',
+      mask: true,
+    });
     wx.getNetworkType({
       success: function (res) {
         // 返回网络类型, 有效值：
@@ -23,10 +27,6 @@ Page({
           })
         }
         else{
-          wx.showLoading({
-              title: '正在为您检测认证信息',
-              mask: true,
-          });
           wx.request({     //检测是否绑定
             url: 'https://windytrees.cn/tied.php?uid=' + openid,
             data: {

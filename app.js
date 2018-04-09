@@ -42,8 +42,7 @@ App({
           })
         }
         else {
-          wx.removeStorageSync('openid');
-          wx.removeStorageSync('username');
+          wx.clearStorageSync();
           wx.authorize({    //授权
             scope: 'scope.userInfo',
             success() {

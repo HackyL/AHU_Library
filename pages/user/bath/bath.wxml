@@ -1,5 +1,5 @@
 <view class="wholeContainer">
-    <view class="todayPart">
+    <view class="todayPart" bindtap="onTap" bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd">
         <view class="todayInfo">
             <text style="font-size: 37.33rpx;color: white">今日 - 周{{todayDay}}</text>
             <text style="font-size: 28rpx;color:white">{{todayDate}}</text>
@@ -7,12 +7,12 @@
         </view>
         <view class="todayBath">
             <view style="display: flex;flex-direction: column;text-align: center">
-                <text style="font-size: 70rpx;color: white">北区</text>
-                <text style="font-size: 46.67rpx;color: white;margin-top: 37rpx">{{front}}</text>
+                <text style="font-size: 70rpx;color: {{frontColor}}">北区</text>
+                <text style="font-size: 46.67rpx;color: {{frontColor}};margin-top: 37rpx">{{front}}</text>
             </view>
             <view style="display: flex;flex-direction: column;text-align: center;margin-left: 82rpx">
-                <text style="font-size: 70rpx;color: white">南区/蕙园</text>
-                <text style="font-size: 46.67rpx;color: white;margin-top: 37rpx">{{rear}}</text>
+                <text style="font-size: 70rpx;color: {{rearColor}}">南区/蕙园</text>
+                <text style="font-size: 46.67rpx;color: {{rearColor}};margin-top: 37rpx">{{rear}}</text>
             </view>
         </view>
     </view>
